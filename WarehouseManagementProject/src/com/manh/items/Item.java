@@ -1,13 +1,15 @@
 package com.manh.items;
 
 public class Item {
+	private static idGenerator=100;
 	protected int itemCode;
 	protected String itemName;
 	protected double itemPrice;
 	protected String itemUnit;
 	public Item(int itemCode, String itemName, double itemPrice, String itemUnit) {
 		super();
-		this.itemCode = itemCode;
+		idGenerator++;
+		this.itemCode = idGenerator;
 		this.itemName = itemName;
 		this.itemPrice = itemPrice;
 		this.itemUnit = itemUnit;
